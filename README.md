@@ -8,7 +8,7 @@
 - Service.B： Web Api 專案, 使用 JWT 授權認證, 具有登入/驗證/發行 token 的功能, 不過和 Service.B 是不同系統, 所以 JWT 的密鑰不會相同
 - DempPublic： Web Api 專案, 使用 JWT 授權認證, 但不具有登入/發行 token 的功能, 但可以驗證 Service.A 和 Service.B 所發行的 token
 
-上述的說明如下
+上述的說明如下  
 ![架構](images/struct.drawio.svg)
 
 要達成這樣的功能並沒什麼特別, 只要 DemoPublic 具有 Service.A 和 Service.B 相同的密鑰就可以, 只是實作上該如何做？ 且不希望同樣的事重複的作業, 所以這裏的實作主要是要將 JWT 的驗證獨立。因此
